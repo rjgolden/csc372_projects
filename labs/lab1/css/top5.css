@@ -1,0 +1,57 @@
+body { 
+    text-align: center;
+    background: black;
+    color: white;
+    font: Helvetica;
+}
+
+h1{
+    font: Helvetica;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+ }
+
+li{
+    font: Georgia;
+    font-size: large;
+}
+
+a:link {
+    color: blue;
+}
+
+img{
+    padding: 5px;
+}
+
+/* Visited Link */
+a:visited {
+    color: #5f030f;
+}
+
+/* Mouse Over Link */
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+/* Click on Link */
+a:active {
+    color: #078686;
+}
+
+img.artist {  
+    border: 1px solid red;
+}
+
+div.spotlight{
+    padding: 10px;
+    border-color: yellow;
+    border-width: 3px;
+    border-style: dotted;
+    width: max-content 300px;
+    text-align: center;
+}
