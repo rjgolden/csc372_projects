@@ -1,0 +1,67 @@
+body { 
+    text-align: center;
+    background: rgb(87, 9, 9);
+    font: Helvetica;
+}
+
+p {
+    color: white;
+    font: Helvetica;
+}
+
+li{
+    color: white;
+    font: Helvetica;
+}
+
+h1{
+    font: Helvetica;
+    font-size: 40px;
+    color: green;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+ }
+
+a:link {
+    color: white;
+}
+
+img{
+    float: center;
+    margin: 10px;
+
+}
+
+/* Visited Link */
+a:visited {
+    color: #29fa16;
+}
+
+/* Mouse Over Link */
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+div.header {
+    border-color: green;
+    border-width: 5px;
+    border-style: ridge;
+    padding: 10px;
+}
+
+div.content {
+    border-color: green;
+    border-width: 5px;
+    border-style: ridge;
+}
