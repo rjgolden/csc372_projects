@@ -3,14 +3,11 @@ var http = require('http');
 // Load the file system module.
 var fs = require('fs');
 var path = require('path');
-const express = require('express');
 // Create a variable that stores the port number (i.e., 1337) at the beginning of your program.
 var port = 1337;
 
 // Define the public directory that contains the HTML (and related) files.
 var publicDir = path.join(__dirname, 'public');
-
-const app = express();
 
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
