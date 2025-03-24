@@ -9,9 +9,6 @@ var port = 1337;
 // Define the public directory that contains the HTML (and related) files.
 var publicDir = path.join(__dirname, 'public');
 
-// Serving static files
-app.use(express.static(path.join(__dirname, 'public')));
-
 /*
  * Function: serveStaticFile
  * Reads the file located at the path being passed in.
