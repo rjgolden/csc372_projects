@@ -1,42 +1,47 @@
 const express = require('express');
+const { engine } = require('express-handlebars');
+const path = require('path');
 const app = express();
 const port = 1337;
-const dir = __dirname + '/public/';
 
-// look for static files to be served in these directories
+// Configure Handlebars view engine
+app.engine('handlebars', engine({
+    defaultLayout: 'main',
+    layoutsDir: path.join(__dirname, 'views/layouts')
+}));
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
+
+// Serve static files
 app.use(express.static('public'));
 app.use(express.static('public/images'));
 app.use(express.static('public/css'));
 app.use(express.static('public/js'));
 
-// index.html
+// Routes
 app.get('/', function(request, response) {
-    response.sendFile(dir + 'index.html');
+    response.render('index');
 });
 
-// menu.html
 app.get('/menu', function(request, response) {
-    response.sendFile(dir + 'menu.html');
+    response.render('menu');
 });
 
-// contact.html
 app.get('/contact', function(request, response) {
-    response.sendFile(dir + 'contact.html');
+    response.render('contact');
 });
 
-// social.html
 app.get('/social', function(request, response) {
-    response.sendFile(dir + 'social.html');
+    response.render('social');
 });
 
-// specials.html
 app.get('/specials', function(request, response) {
-    response.sendFile(dir + 'specials.html');
+    response.render('specials');
 });
 
-// 404.html with wildcard
+// 404 with wildcard
 app.get('*', function(request, response) {
-    response.sendFile(dir + '404.html');
+    response.status(404).render('404');
 });
 
 app.listen(port, function() {
