@@ -39,9 +39,22 @@ app.get('/specials', function(request, response) {
     response.render('specials');
 });
 
-// 404 with wildcard
-app.get('*', function(request, response) {
+// Test route to trigger a 500 error
+app.get('/trigger-error', function(request, response, next) {
+    // Create an error and pass it to the next middleware
+    const error = new Error('This is a test error');
+    next(error);
+});
+
+// 404 handler - must be BEFORE the error handler
+app.use(function(request, response, next) {
     response.status(404).render('404');
+});
+
+// 500 error handler - must be AFTER routes and 404 handler
+app.use(function(err, request, response, next) {
+    console.error('Server Error:', err);
+    response.status(500).render('500');
 });
 
 app.listen(port, function() {
