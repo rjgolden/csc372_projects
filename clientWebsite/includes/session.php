@@ -23,11 +23,22 @@
 
 
     
-    function require_login($logged_in)              // Check if user logged in
+    function require_login($logged_in)
     {
-        if ($logged_in == false) {                 // If not logged in
-            header('Location ../login.php');        // Send to login page
-            exit;                                // Stop rest of page running
+        if ($logged_in == false) {
+            // Get the server protocol (http or https)
+            $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+            
+            // Get the server name and script directory
+            $host = $_SERVER['HTTP_HOST'];
+            $directory = rtrim(dirname($_SERVER['PHP_SELF']), '/');
+            
+            // Build the full URL for the login page
+            $url = $protocol . $host . $directory . '/login.php';
+            
+            // Redirect with absolute URL
+            header("Location: $url");
+            exit;
         }
     }
 
