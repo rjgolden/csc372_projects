@@ -1,3 +1,9 @@
+<?php
+  // Include the session script
+  require_once 'includes/session.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,33 +18,37 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 <img src="images/Logo1.png" alt="Taste of Italy Logo" width="160" height="160">
             </a>
-            <h1 class = "title"> Taste of Italy • Deli & Caffè </h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="specials.html">Specials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="social.html">Social Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.php">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="specials.php">Specials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="social.php">Social Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= $logged_in ? 'logout.php' : 'login.php' ?>"><?= $logged_in ? 'Log Out' : 'Log In' ?></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Daily Specials -->
-    <section class="bg-light py-5" id="specials">
-        <div class="container">
-            <h2 class="menu">Current Specials</h2>
-            <div id="specialsContent"></div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content container text-center">
+            <h1 class="display-4">Welcome to Taste of Italy</h1>
+            <p class="lead">Authentic Italian Cuisine in Johnston, RI</p>
+            <!-- Form Button -->
+            <a href="form.php" class="btn btn-danger btn-lg mt-3">Contact Us</a>
+            <a href="menuManager.php" class="btn btn-danger btn-lg mt-3">Suggest a Menu Item (For Assignment purposes only)</a>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer>
@@ -49,7 +59,7 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/specials.js"></script>
 </body>
 </html>
