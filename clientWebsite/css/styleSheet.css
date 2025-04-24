@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: tasteFont;
-    src: url(/fonts/Italiana-Regular.ttf);
+    src: url(../fonts/Italiana-Regular.ttf);
 }
 
 @font-face {
     font-family: playListScript;
-    src: url(/fonts/PlaylistScript.otf);
+    src: url(../fonts/PlaylistScript.otf);
 }
 
 
@@ -61,7 +61,7 @@ footer {
 }
 
 .hero {
-    background-image: url('/images/romeLogo2.jpg');
+    background-image: url('../images/romeLogo2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -102,7 +102,7 @@ footer {
     color: 0;
     font-weight: 200px;
     text-align: justify;
-    font-size: 50px;
+    font-size: 30px;
     margin-left: 70px;
 }
 
