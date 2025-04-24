@@ -22,12 +22,15 @@
 
 
 
-
-    function require_login($logged_in)              // Check if user logged in
+    
+   function require_login($logged_in)
     {
-        if ($logged_in == false) {                 // If not logged in
-            header('Location: ../login.php');        // Send to login page
-            exit;                                // Stop rest of page running
+        if ($logged_in == false) {
+            // Use absolute URL path
+            $base_url = "https://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+            $login_url = rtrim($base_url, '/') . '/login.php';
+            header("Location: $login_url");
+            exit;
         }
     }
 
