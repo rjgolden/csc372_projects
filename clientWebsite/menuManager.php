@@ -3,7 +3,7 @@
 require_once 'includes/session.php';
 
 // Redirect if not logged in
-require_login($logged_in);
+// require_login($logged_in);
 
 // Initialize variables
 $error_message = '';

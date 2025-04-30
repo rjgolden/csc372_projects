@@ -26,7 +26,7 @@
     function require_login($logged_in)              // Check if user logged in
     {
         if ($logged_in == false) {                 // If not logged in
-            header('Location ../login.php');        // Send to login page
+            header('Location: login.php');        // Send to login page
             exit;                                // Stop rest of page running
         }
     }
