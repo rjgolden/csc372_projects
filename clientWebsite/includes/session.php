@@ -11,18 +11,10 @@
 
     function login($username)
     {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start(); // Ensure session is started before regenerating ID
-        }
-    
         session_regenerate_id(true);           // Regenerate session ID
         $_SESSION['logged_in'] = true;        // Mark as logged in
-        $_SESSION['username'] = $username;    // Save username in session
+        $_SESSION['username'] = $username;    // Save username
     }
-
-
-
-
 
     function require_login($logged_in)              // Check if user logged in
     {
