@@ -5,7 +5,7 @@
   // If already logged in
   if ($logged_in) {
     // Redirect to profile page  
-    header('Location: profile.php');
+    header('Location: index.php');
     // Stop further code running
     exit;
   }    
@@ -40,7 +40,7 @@
             // Authentication successful
             login($username);
             // Redirect to profile page
-            header('Location: profile.php');
+            header('Location: index.php');
             exit;
           } else {
             // Password is incorrect
