@@ -38,6 +38,7 @@
           // Assuming passwords are stored with password_hash()
           if (password_verify($password, $user['password'])) {
               login($username);
+              session_write_close();
               header('Location: profile.php');
               exit;
           }
