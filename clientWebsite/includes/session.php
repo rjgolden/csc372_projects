@@ -11,12 +11,17 @@
 
 
 
-    function login($username)                             // Remember user passed login
+    function login($username)
     {
-        session_regenerate_id(true);                     // Update session id
-        $_SESSION['logged_in'] = true;                  // Set logged_in key to true
-        $_SESSION['username'] = $username;             // Set username key to one from form
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start(); // Ensure session is started before regenerating ID
+        }
+    
+        session_regenerate_id(true);           // Regenerate session ID
+        $_SESSION['logged_in'] = true;        // Mark as logged in
+        $_SESSION['username'] = $username;    // Save username in session
     }
+
 
 
 
