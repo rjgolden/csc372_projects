@@ -43,6 +43,4 @@ function pdo(PDO $pdo, string $sql, array $arguments = null)
         $statement = $pdo->prepare($sql);  // If arguments, prepare SQL statement
         $statement->execute($arguments);  // Bind & execute SQL statement w/provided arguments
         return $statement;               // Return PDOStatement object
-    }
-                                          
-?>                                             
+    }                                          
