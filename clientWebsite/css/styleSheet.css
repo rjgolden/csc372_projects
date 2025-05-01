@@ -92,9 +92,9 @@ footer {
 .faceBook {
     font-family: playListScript;
     color: var(--italian-red);
-    font-weight: 200px;
+    font-weight: 100px;
     text-align: center;
-    font-size: 125px;
+    font-size: 75px;
 }
 
 .title{
@@ -111,9 +111,29 @@ footer {
     font-family: playListScript;
 }
 
+.menu2 {
+    text-align: center;
+    font-family: playListScript;
+    color: var(--italian-green);
+}
+
 .normalFont{
     font-family: tasteFont;
     font-weight: bold;
+}
+
+.normalFont2{
+    font-family: tasteFont;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.disclaimerFont{
+    font-family: tasteFont;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: var(--italian-red);
 }
 
 #map {
@@ -121,4 +141,21 @@ footer {
     width: 100%;
     margin-top: 20px;
     border-radius: 8px;
+}
+
+.contact-left-column {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    #contact .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #contact .col-md-6 {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
 }

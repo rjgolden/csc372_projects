@@ -1,0 +1,61 @@
+[
+    {
+      "name": "Mac and Cheese",
+      "description": "Homemade mac and cheese.",
+      "price": "9.99"
+    },
+
+    {
+      "name": "American Chop Suey",
+      "description": "Pasta with ground beef sauce.",
+      "price": "9.99"
+    },
+
+    {
+      "name": "Sausage & Rabe",
+      "description": "Freshly prepared sausage & rabe.",
+      "price": "10.99"
+    },
+
+    {
+      "name": "Sausage & Peppers",
+      "description": "Freshly prepared sausage & green peppers.",
+      "price": "10.99"
+    },
+
+    {
+      "name": "Frittata",
+      "description": "With potato and onion.",
+      "price": "10.99"
+    },
+
+    {
+      "name": "Chickpea Salad",
+      "description": "Freshly prepared chickpea salad.",
+      "price": "9.99"
+    },
+
+    {
+      "name": "Roasted Potatoes",
+      "description": "Potatoes roasted in olive oil and seasonings.",
+      "price": "9.99/lb"
+    },
+
+    {
+      "name": "Stuffed Mushroom",
+      "description": "Massive stuffed mushroom.",
+      "price": "4.99/ea"
+    },
+
+    {
+      "name": "Pasta Salad",
+      "description": "Freshly prepared pasta salad.",
+      "price": "9.99"
+    },
+
+    {
+      "name": "Snail Salad",
+      "description": "Homemande snail salad.",
+      "price": "23.99"
+    }
+]

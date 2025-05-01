@@ -45,5 +45,9 @@
                 </div>
             </div>
         </div>
+
+         <!-- Script for Smooth Loading Effects -->
+         <script src="js/jQuery.js"></script>
+        <script src="js/smooth.js"></script>
     </body>
 </html>

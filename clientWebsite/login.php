@@ -66,7 +66,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste of Italy Login Page</title>
-    <link rel="stylesheet" href="css/styleSheet.css">
+    <link rel="stylesheet" href="css/formStyle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -76,7 +76,7 @@
       <div class="header-left">
         <div class="logo">
             <a class="navbar-brand" href="index.php">
-            <img src="images/Logo1.png" alt="Taste of Italy Logo" width="160" height="160">
+            <img src="images/Logo1.png" alt="Taste of Italy Logo" width="160" height="160" justify = "center">
             </a>
         </div>
       </div>
@@ -93,11 +93,32 @@
 
       <form method="POST" action="login.php">
         Username: <input type="text" name="username" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>"><br> <br>
-        Password: <input type="password" name="password"><br> <br>
+        Password: <br><input type="password" name="password" value = ""><br> <br>
         <input type="submit" value="Log In">
       </form>
       
       <p>Don't have an account? <a href="register.php">Register here</a></p>
+      <p><a href="index.php">Back to Home</a></p>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      // Cache jQuery selections
+      const $cache = {
+        loginForm: $('form'),
+        usernameInput: $('input[name="username"]'),
+        passwordInput: $('input[name="password"]')
+      };
+      
+      $cache.loginForm.on('submit', function(event) {
+        // Form validation can be handled here
+      });
+    });
+    </script>
+
+     <!-- Script for Smooth Loading Effects -->
+     <script src="js/jQuery.js"></script>
+     <script src="js/smooth.js"></script>
   </body>
 </html>

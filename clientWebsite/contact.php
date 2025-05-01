@@ -29,7 +29,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="menu.php">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="specials.php">Specials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="specials.php">Prepared Foods</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="social.php">Social Media</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= $logged_in ? 'logout.php' : 'login.php' ?>"><?= $logged_in ? 'Log Out' : 'Log In' ?></a></li>
@@ -40,23 +40,8 @@
     <!-- Contact Section -->
     <section class="container py-5" id="contact">
         <div class="normalFont">
-            <h2 class="menu">Contact Us</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <form id="contactForm" class="needs-validation" novalidate>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="3" placeholder="Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-custom">Send Message</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
+            <div class="col-md-6">
                     <div class="ps-md-4">
                         <h3>Visit Us!</h3>
                         <p>1302 Atwood Avenue<br>Johnston, RI 02919</p>
@@ -66,6 +51,12 @@
                         <p>(401) 942-1234</p>
                         <button id="findDirections" class="btn btn-custom mt-2">Find Directions From My Location</button>
                     </div>
+                </div>
+                <div class="col-md-6">
+                    <h3> Contact Us!</h3>
+                    <p> Fill out the form below<br>to send us a message! <br> We Will respond ASAP. </p>
+                    <!-- Form Button -->
+                    <a href="form.php" class="btn btn-danger btn-lg mt-3"> Contact Us</a>
                 </div>
             </div>
             
@@ -87,11 +78,35 @@
         </div>
     </footer>
 
+    <!-- Jquery for contact form -->
+    <script src="js/jQuery.js"></script>
+    <!-- Script for Smooth Loading Effects -->
+    <script src="js/smooth.js"></script>
+
+    <script>
+    $(document).ready(function() {
+    // Cache jQuery selections
+    const $cache = {
+        contactForm: $('#contactForm'),
+        nameInput: $('input[placeholder="Name"]'),
+        emailInput: $('input[placeholder="Email"]'),
+        messageInput: $('textarea[placeholder="Message"]')
+    };
+    
+    $cache.contactForm.on('submit', function(event) {
+        if (!this.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+        }
+        $(this).addClass('was-validated');
+    });
+    });
+    </script>
 
     <!-- Load script for google maps -->
     <script src = "js/googleMapsAPI.js"></script>
     <!-- Load Google Maps API with your API key -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW_NNVIzqF8ItELFdowcZvnkjVA4KAY24&callback=initMap"> </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"> </script>
 
 </body>
 </html>

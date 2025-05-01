@@ -3,7 +3,6 @@
   require_once 'includes/session.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +28,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="menu.php">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="specials.php">Specials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="specials.php">Prepared Foods</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="social.php">Social Media</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= $logged_in ? 'logout.php' : 'login.php' ?>"><?= $logged_in ? 'Log Out' : 'Log In' ?></a></li>
@@ -43,23 +42,27 @@
         <div class="hero-content container text-center">
             <h1 class="display-4">Welcome to Taste of Italy</h1>
             <p class="lead">Authentic Italian Cuisine in Johnston, RI</p>
-            <!-- Form Button -->
-            <a href="form.php" class="btn btn-danger btn-lg mt-3">Contact Us</a>
-            <a href="menuManager.php" class="btn btn-danger btn-lg mt-3">Suggest a Menu Item (For Assignment purposes only)</a>
+            <p class = "normalFont2"> At Taste of Italy, we bring the warmth and tradition of authentic Italian cuisine to your neighborhood. 
+From hot sandwiches and freshly prepared foods to decadent desserts and evber changing specials, every item is made with premium ingredients and genuine Italian passion. Our deli counter features a tempting array of ready-to-enjoy specialties perfect for a quick lunch or an effortless family dinner.
+Visit us today to experience the true flavors of Italy in every bite! </p> 
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
             <p>© 2025 Taste of Italy. All rights reserved.</p>
             <p>123 Main Street, Johnston, RI 02919 | (401) 555-0123</p>
+            <p> Created by: Ryan Golden <br> Email: <a href="mailto:your.email@example.com"> ryan_golden@uri.edu </a> </p>
             <img src = "images/Logo2.png" alt="Taste of Italy Logo 2" width = "120" height = "80">
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/jQuery.js"></script>
+     <!-- Script for Smooth Loading Effects -->
+    <script src="js/smooth.js"></script>
 </body>
 </html>

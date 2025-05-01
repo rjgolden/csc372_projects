@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specials>
+
+  <special>
+    <name>Antipasto</name>
+    <description>Arrangement of cured meats, cheeses, olives, vegetables. </description>
+    <price>10.99</price>
+  </special>
+
+  <special>
+    <name>Chicken Broccoli</name>
+    <description>Chicken tossed with Broccoli. </description>
+    <price>10.99</price>
+  </special>
+
+   <special>
+    <name>Tomato Cucumber</name>
+    <description>Tomato & Cucumber salad. </description>
+    <price>9.99</price>
+  </special>
+
+   <special>
+    <name>Roasted Red Peppers</name>
+    <description>Roasted in olive oil & salt. </description>
+    <price> 11.99 </price>
+  </special>
+
+   <special>
+    <name>Pasta w/ Broccoli</name>
+    <description>Pasta tossed with Broccoli</description>
+    <price>9.99</price>
+  </special>
+
+   <special>
+    <name>Italian Tuna</name>
+    <description>Italian style tuna salad.</description>
+    <price>10.99</price>
+  </special>
+
+   <special>
+    <name>Tuna</name>
+    <description>Traditional tuna salad.</description>
+    <price>10.99</price>
+  </special>
+
+   <special>
+    <name>Chicken Salad</name>
+    <description>Traditional chicken salad made with celery, onions and mayonnaise. </description>
+    <price>10.99</price>
+  </special>
+
+   <special>
+    <name>Calzones </name>
+    <description>Varies by the day</description>
+    <price>7.99</price>
+  </special>
+
+</specials>

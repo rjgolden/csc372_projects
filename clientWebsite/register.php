@@ -66,7 +66,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste of Italy - Register</title>
-    <link rel="stylesheet" href="css/styleSheet.css">
+    <link rel="stylesheet" href="css/formStyle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -110,5 +110,25 @@
         <p>Already have an account? <a href="login.php">Log in here</a></p>
       <?php endif; ?>
     </div>
+
+    <script src="js/jQuery.js"></script>
+    <script>
+    $(document).ready(function() {
+      // Cache jQuery selections
+      const $cache = {
+        registerForm: $('form'),
+        usernameInput: $('input[name="username"]'),
+        passwordInput: $('input[name="password"]')
+      };
+      
+      $cache.registerForm.on('submit', function(event) {
+        // Form validation can be handled here
+      });
+    });
+    </script>
+
+     <!-- Script for Smooth Loading Effects -->
+     <script src="js/smooth.js"></script>
+
   </body>
 </html>

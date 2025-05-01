@@ -172,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['end_session'])) {
         // Add JavaScript to redirect after showing the success message
         echo '<script>
             setTimeout(function() {
-                window.location.href = "index.html";
+                window.location.href = "index.php";
             }, 3000); // Redirect after 3 seconds
         </script>';
     } else {
@@ -186,102 +186,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['end_session'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Contact Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        form {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        .radio-group {
-            margin: 10px 0;
-        }
-        .radio-option {
-            margin-right: 15px;
-            display: inline-block;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .session-end-btn {
-            background-color: #dc3545;
-        }
-        .session-end-btn:hover {
-            background-color: #c82333;
-        }
-        .error {
-            color: #D8000C;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        .success-message {
-            background-color: #DFF2BF;
-            color: #4F8A10;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            text-align: center;
-        }
-        .error-message {
-            background-color: #FFBABA;
-            color: #D8000C;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            text-align: center;
-        }
-        .cookie-info, .session-info {
-            background-color: #E7F3FE;
-            border-left: 6px solid #2196F3;
-            margin-bottom: 20px;
-            padding: 10px 15px;
-            border-radius: 4px;
-        }
-        .cookie-info h3, .session-info h3 {
-            margin-top: 0;
-            color: #0d6efd;
-        }
-    </style>
+    <link rel="stylesheet" href="css/formStyle.css">
+    
 </head>
 <body>
     <h1>Contact Us</h1>
@@ -352,5 +258,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['end_session'])) {
         
         <button type="submit">Submit</button>
     </form>
+    <a href="contact.php">Back</a>
+
+    <script src="js/jQuery.js"></script>
+    <script>
+    $(document).ready(function() {
+    // Cache jQuery selections
+    const $cache = {
+        form: $('form'),
+        nameInput: $('#name'),
+        emailInput: $('#email'),
+        phoneInput: $('#phone'),
+        ageInput: $('#age'),
+        messageInput: $('#message'),
+        contactMethodRadios: $('input[name="contact_method"]')
+    };
+    
+    $cache.form.on('submit', function(event) {
+        // Form validation can be handled here
+    });
+    });
+    </script>
+
+     <!-- Script for Smooth Loading Effects -->
+     <script src="js/smooth.js"></script>
 </body>
 </html>
