@@ -2,14 +2,12 @@
     // Include the database connection script
     require 'database-connection.php';
 
-
-    session_start();                                         // Start/renew session
-
+    // Ensure no output has been sent before headers/sessions
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 
     $logged_in = $_SESSION['logged_in'] ?? false;           // Is user logged in?
-
-
-
 
     function login($username)
     {
