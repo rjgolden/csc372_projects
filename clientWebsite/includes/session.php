@@ -1,17 +1,10 @@
 <?php
-
-
     // Include the database connection script
     require 'database-connection.php';
 
-
     session_start();                                         // Start/renew session
 
-
     $logged_in = $_SESSION['logged_in'] ?? false;           // Is user logged in?
-
-
-
 
     function login($username)                             // Remember user passed login
     {
@@ -19,9 +12,6 @@
         $_SESSION['logged_in'] = true;                  // Set logged_in key to true
         $_SESSION['username'] = $username;             // Set username key to one from form
     }
-
-
-
 
     function require_login($logged_in)              // Check if user logged in
     {
