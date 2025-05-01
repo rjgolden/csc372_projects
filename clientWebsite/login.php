@@ -1,6 +1,6 @@
 <?php
   // Include the session script
-  require_once '/includes/session.php';
+  require_once 'includes/session.php';
 
   // If already logged in
   if ($logged_in) {
