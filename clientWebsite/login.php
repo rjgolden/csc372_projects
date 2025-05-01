@@ -1,7 +1,10 @@
 <?php
   // Include the session script
   require_once 'includes/session.php';
-
+  // Start the session at the very top
+  if (session_status() === PHP_SESSION_NONE) {
+      session_start();  // Ensure the session is started before any output
+  }
   // At the very top of your login.php file, add this debugging code
   ini_set('display_errors', 1);
   error_reporting(E_ALL);
