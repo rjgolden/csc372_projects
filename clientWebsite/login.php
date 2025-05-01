@@ -1,5 +1,6 @@
 <?php
   // Include the session script
+  ob_start();
   require_once 'includes/session.php';
 
   // If already logged in
@@ -38,7 +39,8 @@
           // Assuming passwords are stored with password_hash()
           if (password_verify($password, $user['password'])) {
               login($username);
-              include('profile.php');
+              // Try PHP redirect also (though it won't work if content was already output)
+              header('Location: profile.php');
               exit;
           }
 
@@ -58,6 +60,7 @@
       }
     }
   }
+  ob_end_flush();
 ?>
 
 <!DOCTYPE html>
