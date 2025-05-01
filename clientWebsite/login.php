@@ -38,13 +38,10 @@
           // Assuming passwords are stored with password_hash()
           if (password_verify($password, $user['password'])) {
               login($username);
-          
-              echo "✅ Login successful. Preparing to redirect...<br>";
-              echo "Session:<br><pre>" . print_r($_SESSION, true) . "</pre>";
-          
               header('Location: profile.php');
               exit;
           }
+
           else {
             // Password is incorrect
             $error_message = "Invalid username or password.";
