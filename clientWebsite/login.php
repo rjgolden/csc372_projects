@@ -1,6 +1,5 @@
 <?php
   // Include the session script
-  ob_start();
   require_once 'includes/session.php';
 
   // If already logged in
@@ -60,7 +59,6 @@
       }
     }
   }
-  ob_end_flush();
 ?>
 
 <!DOCTYPE html>
