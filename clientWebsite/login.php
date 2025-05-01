@@ -2,6 +2,9 @@
   // Include the session script
   require_once 'includes/session.php';
 
+  // At the very top of your login.php file, add this debugging code
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
   // If already logged in
   if ($logged_in) {
     // Redirect to profile page  
@@ -38,8 +41,8 @@
           // Assuming passwords are stored with password_hash()
           if (password_verify($password, $user['password'])) {
               login($username);
-              // Try PHP redirect also (though it won't work if content was already output)
-              header('Location: profile.php');
+              $base_url = "https://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+              header("Location: {$base_url}/profile.php");
               exit;
           }
 
