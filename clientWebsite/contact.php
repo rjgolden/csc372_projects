@@ -106,7 +106,7 @@
     <!-- Load script for google maps -->
     <script src = "js/googleMapsAPI.js"></script>
     <!-- Load Google Maps API with your API key -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"> </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5BI29EQUnBPnO0FL-4BPHPxAQxHwSpqE&callback=initMap"> </script>
 
 </body>
 </html>
